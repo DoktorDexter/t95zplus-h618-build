@@ -1,18 +1,15 @@
-# 编译步骤
+# Compile steps
 
-- 你需要一个已经安装Docker的Linux系统环境
-- 克隆Armbian仓库到本地，地址https://github.com/LYU4662/h618-build.git
-- 复制本仓库下所有文件到你本地的h618-build代码目录(除了t95zplus_android_dtb_dump.dts)
-- 最最重要的是要修改h618-build的VERSION文件，把里面的24.5.0-trunk修改为最新的文件系统版本，20241012最新为24.11.0-trunk
-- 必须使用`非root用户`执行`build.sh`脚本，选择型号开始编译。
-- 修改kernel config增加AIC8800 WIFI驱动支持  -> Device Drivers   -> Network device support (NETDEVICES [=y])  -> Wireless LAN (WLAN [=y])    -> AIC wireless Support (AIC_WLAN_SUPPORT [=y])    -> AIC8800 bluetooth Support (AIC8800_BTLPM_SUPPORT [=y])
-- 第一次编译通常耗时较长，需要耐心等待。
+- You need a Linux system environment with Docker installed
+- Clone the Armbian repository to your local computer, address: https://github.com/LYU4662/h618-build.git
+- Copy all files in this repository to your local h618-build code directory (except t95zplus_android_dtb_dump.dts)
+- The most important thing is to modify the VERSION file of h618-build, and change the 24.5.0-trunk in it to the latest file system version. The latest version in 20241012 is 25.8.0-trunk
+- You must use a `non-root user` to execute the `build.sh` script and select the model to start compiling.
+ - Modify kernel config to add AIC8800 WIFI driver support -> Device Drivers -> Network device support (NETDEVICES [=y]) -> Wireless LAN (WLAN [=y]) -> AIC wireless Support (AIC_WLAN_SUPPORT [=y]) -> AIC8800 bluetooth Support (AIC8800_BTLPM_SUPPORT [=y])
+- The first compilation usually takes a long time, so you need to be patient.
 
-
-
-# 参考 & 感谢
+# Reference & Thanks
 
 https://github.com/NickAlilovic/build.git
 
 https://github.com/cm9vdA/build-armbian.git
-
