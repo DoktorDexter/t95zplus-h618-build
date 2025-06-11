@@ -1,10 +1,7 @@
 # Compile steps
 
 - You need a Linux system environment with Docker installed
-- Clone the Armbian repository to your local computer
-'''
-git clone https://github.com/LYU4662/h618-build.git
-'''
+- Clone the Armbian repository to your local computer `git clone https://github.com/LYU4662/h618-build.git`
 - Copy all files in this repository to your local h618-build code directory (except t95zplus_android_dtb_dump.dts)
 - The most important thing is to modify the VERSION file of h618-build, and change the 24.5.0-trunk in it to the latest file system version. The latest version in june 2025 is 25.8.0-trunk
 - You must use a `non-root user` to execute the `build.sh` script and select the model to start compiling.
